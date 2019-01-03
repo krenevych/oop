@@ -33,9 +33,8 @@ class Triangle:
         return res ** 0.5
 
 if __name__ == "__main__":
-    t = Triangle(3, 4, 5)
-    print("Площа заданого трикутника = %f" % t.square())
-
-    t1 = Triangle(t)
-    t1.a = 5
-    print("Площа заданого трикутника = %f" % t1.square())
+    t1 = Triangle(3, 4, 5) # створення трикутника за сторонами
+    t2 = Triangle(t1)      # створення копії трикутника t1
+    t2.a = 5
+    print("Площа трикутника t1 = %f" % t1.square())
+    print("Площа трикутника t2 = %f" % t2.square())

@@ -1,7 +1,18 @@
-class Vector2D :
+class Car:
+    ...
+    wheel_number = 4  # Статичне поле
+
+    @staticmethod
+    def getWheelNumber():
+        """ Статичний метод
+        :return: значення статичного поля wheel_number
+        """
+        return Car.wheel_number
+
     ...
 
-v = Vector2D(1, 1)
 
-isinstance(x, cls)
+print(Car.wheel_number)
 
+c = Car()
+print(c.wheel_number)

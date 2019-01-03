@@ -1,4 +1,4 @@
-from source.P_01.L3_Triangle import Triangle
+from source.P_01.L4_Triangle import Triangle
 
 from copy import copy
 
