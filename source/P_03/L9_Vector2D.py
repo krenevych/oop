@@ -27,14 +27,47 @@ class Vector2D:
         """
         return self.x * other.x + self.y * other.y
 
+    def __iadd__(self, other):
+        """ Оператор +=
+        :param other: Правий операнд
+        :return: self
+        """
+        self.x += other.x
+        self.y += other.y
+        return self
+
+    def __isub__(self, other):
+        """ Оператор -=
+        :param other: Правий операнд
+        :return: self
+        """
+        self.x -= other.x
+        self.y -= other.y
+        return self
+class aaa:
+
+    def __eq__(self, other):
+        """ Оператор ==
+        :param other: Правий операнд
+        :return: True, якщо self == other
+        """
+        return self.x == other.x and self.y == other.y
+
+    def __ne__(self, other):
+        """ Оператор !=
+        :param other: Правий операнд
+        :return: True, якщо self != other
+        """
+        return not self.__eq__(other)
+
+
 
 if __name__ == "__main__":
-    v1 = Vector2D(1, 3)
-    v2 = Vector2D(4, 2)
-    v3 = v1 + v2  # v3 = v1.__add__(v2)
-    v4 = v1 - v2  # v4 = v1.__sub__(v2)
-    a = v1 * v2    # a = v1.__mul__(v2)
+    v1 = Vector2D(1, 1)
+    v2 = Vector2D(2, 3)
 
-    print(v3)
-    print(v4)
-    print(a)
+    print(v1 == v2)
+    print(v1 != v2)
+
+
+

@@ -27,14 +27,29 @@ class Vector2D:
         """
         return self.x * other.x + self.y * other.y
 
+    def __iadd__(self, other):
+        """ Оператор +=
+        :param other: Правий операнд
+        :return: self
+        """
+        self.x += other.x
+        self.y += other.y
+        return self
+
+    def __isub__(self, other):
+        """ Оператор -=
+        :param other: Правий операнд
+        :return: self
+        """
+        self.x -= other.x
+        self.y -= other.y
+        return self
+
 
 if __name__ == "__main__":
-    v1 = Vector2D(1, 3)
-    v2 = Vector2D(4, 2)
-    v3 = v1 + v2  # v3 = v1.__add__(v2)
-    v4 = v1 - v2  # v4 = v1.__sub__(v2)
-    a = v1 * v2    # a = v1.__mul__(v2)
+    v1 = Vector2D(1, 1)
+    v2 = Vector2D(2, 3)
+    v2 += v1    # v2.__iadd__(v1)
+    print(v2)
 
-    print(v3)
-    print(v4)
-    print(a)
+
