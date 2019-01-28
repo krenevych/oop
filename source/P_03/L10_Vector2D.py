@@ -66,14 +66,14 @@ class Vector2D:
         """
         return not self.__eq__(other)
 
+    def __neg__(self):
+        """ Оператор унарний мінус """
+        return Vector2D(-self.x, -self.y)
 
 
 if __name__ == "__main__":
-    v1 = Vector2D(1, 1)
-    v2 = Vector2D(2, 3)
-
-    print(v1 == v2)
-    print(v1 != v2)
+    a = Vector2D(3, 4)
+    print(-a)
 
 
 

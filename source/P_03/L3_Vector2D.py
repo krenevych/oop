@@ -3,9 +3,6 @@ class Vector2D:
         self.x = x  # Координата x вектора
         self.y = y  # Координата y вектора
 
-    def __str__(self):
-        return "(%f, %f)" % (self.x, self.y)
-
     def __abs__(self):
         """ Визначає довжину вектора
         :return: довжину вектора

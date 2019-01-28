@@ -27,6 +27,13 @@ class Vector2D:
         """
         return self.x * other.x + self.y * other.y
 
+    def __abs__(self):
+        """ Визначає довжину вектора, використовуючи
+         перевантажений оператор множення
+        :return: довжину вектора
+        """
+        return (self * self) ** 0.5  # self.__mul__(self)
+
     def __iadd__(self, other):
         """ Оператор +=
         :param other: Правий операнд

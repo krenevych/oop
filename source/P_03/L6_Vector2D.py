@@ -3,9 +3,6 @@ class Vector2D:
         self.x = x  # Координата x вектора
         self.y = y  # Координата y вектора
 
-    def __str__(self):
-        return "(%f, %f)" % (self.x, self.y)
-
 
 if __name__ == "__main__":
     v1 = Vector2D(1, 3)
