@@ -1,5 +1,12 @@
 class InputPositiveIntException(Exception):
     def __init__(self, message, err_code, original_value, converted_value):
+        """ Конструктор
+
+        :param message: повідомлення
+        :param err_code: код помилки
+        :param original_value: введене з клавіатури значення
+        :param converted_value: перетворене у ціле введене значення
+        """
         super().__init__()
         self.message = message
         self.original_value = original_value
