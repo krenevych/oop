@@ -21,3 +21,12 @@ mkgir ".ssh"
 7. Проверьте работоспособность ключа, введя в Git Bash:
 
 ssh git@github.com
+
+
+TortoiseGIT :
+Для коректного доступу до репозиторію через TortoiseGIT потрібно встановити у полі SSH client 
+(Settings -> Network -> SSH client)
+посилання на коректного клієнта, наприклад C:\Program Files\Git\usr\bin\ssh.exe
+
+
+
