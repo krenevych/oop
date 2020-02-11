@@ -1,4 +1,6 @@
 class ProtectedDictIntError(KeyError):
+
+    # Сталі для зазначення коду помилки
     NON_INTEGER_KEY = 0
     MISSED_KEY = 1
     CHANGE_VALUE = 2
@@ -18,20 +20,27 @@ class ProtectedDictIntError(KeyError):
 
 class ProtectedDictInt:
     def __init__(self):
-        self.__dict = {}
+        self.__dict = {}  # Словник
 
     def __setitem__(self, key, value):
-        if not isinstance(key, int):
+        """ Метод, що перевантажує оператор [] для запису
+        :param key: Ключ
+        :param value: Значення
+        """
+        if not isinstance(key, int):  # якщо ключ не ціле число
             raise ProtectedDictIntError(ProtectedDictIntError.NON_INTEGER_KEY, "NON_INTEGER_KEY")
 
-        if key in self.__dict:
+        if key in self.__dict:  # Якщо ключ міститься у словнику, забороняємо зміну значення
             raise ProtectedDictIntError(ProtectedDictIntError.CHANGE_VALUE, "CHANGE_VALUE")
 
         self.__dict[key] = value
 
     def __getitem__(self, key):
-
-        if key not in self.__dict:
+        """ Метод, що перевантажує оператор [] для читання
+        :param key: Ключ
+        :return: значення, що відподає ключу
+        """
+        if key not in self.__dict:  # якщо ключ не містиься у словнику
             raise ProtectedDictIntError(ProtectedDictIntError.MISSED_KEY, "MISSED_KEY")
 
         return self.__dict[key]
