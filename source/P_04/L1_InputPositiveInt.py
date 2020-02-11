@@ -14,7 +14,7 @@ class InputPositiveIntException(Exception):
         self.err_code = err_code
 
     def __str__(self) -> str:
-        return str(self.message)
+        return "InputPositiveIntException: " + str(self.message)
 
 
 def input_positive_int(*args, **kwargs):
