@@ -18,25 +18,28 @@ class InputPositiveIntException(Exception):
 
 
 def input_positive_int(*args, **kwargs):
+    """ Обгортка навколо функції input() """
     s = input(*args, **kwargs)
     try:
         i = int(s)
-    except ValueError:
+    except ValueError:  # якщо введене з клавіатури не є цілим
         raise InputPositiveIntException("Non integer value", 1, s, None)
 
-    if i < 0:
+    if i < 0:  # якщо введене з клавіатури число від'ємне
         raise InputPositiveIntException("Non positive value", 2, s, i)
     return i
 
 
-while True:
-    try:
-        a = input_positive_int("Enter integer value (type 'exit' to finish) = ")
-        print(a)
-    except InputPositiveIntException as e:
-        if e.err_code == 1 and e.original_value == "exit":
-            break
-        print(e)
+if __name__ == "__main__":
+
+    while True:
+        try:
+            a = input_positive_int("Enter integer value (type 'exit' to finish) = ")
+            print(a)
+        except InputPositiveIntException as e:
+            if e.err_code == 1 and e.original_value == "exit":
+                break
+            print(e)
 
 
 
