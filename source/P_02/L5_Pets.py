@@ -14,7 +14,6 @@ class Parrot(Pet):
                                  # конструктора базового класу
         self._masterName = masterName  # ім’я господаря
 
-
     def voice(self):
         """ Метод "голос" """
         print("Parrot says:", self._name + " horoshy!")
