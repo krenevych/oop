@@ -1,5 +1,5 @@
 from abc import ABCMeta, abstractmethod
-from source.P_05.Visitor_Pet.L2_Pet import Cat, Dog
+from source.P_05.L2_Pet import Cat, Dog
 
 
 ##########################################

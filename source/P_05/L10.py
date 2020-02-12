@@ -1,25 +1,12 @@
-from source.P_05.L8 import Cat, Dog, Parrot
-from source.P_05.L9 import Logged
+from source.P_05.L8 import Car
+from source.P_05.L9 import Human
 
+c = Car()
+h = Human()
 
-# Фактично додаємо до класів Cat, Dog, Parrot
-# функціонал класу Loged
-class LoggedCat(Logged, Cat):
-    pass
+for i in range(5):
+    c.driving()
+    h.attend_party()
 
-
-class LoggedDog(Logged, Dog):
-    pass
-
-
-class LoggedParrot(Logged, Parrot):
-    pass
-
-
-c = LoggedCat("Кузя", 4, 2)
-d = LoggedDog("Барбос", 4, 1)
-p = LoggedParrot("Попка", 2, 0)
-
-c.log()  # Викликаємо метод класу Loged
-d.log()  # Викликаємо метод класу Loged
-p.log()  # Викликаємо метод класу Loged
+print(c.diagnose())
+print(h.diagnose())

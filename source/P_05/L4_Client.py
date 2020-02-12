@@ -1,4 +1,4 @@
-from source.P_05.Visitor_Pet.L3_Visitor import *
+from source.P_05.L3_Visitor import *
 
 dog = Dog("Rex")
 cat = Cat("Kuzya")

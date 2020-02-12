@@ -1,11 +1,9 @@
-# Конкретний клас Людина
-from source.P_05.L2 import Diagnosable
-from source.P_05.L4 import Creature
+# Базовий клас Траспорт
+class Transport:
 
+    def __init__(self, resource=100000):
+        self._resource = resource
+        self._current_mileage = 0
 
-class Human(Creature, Diagnosable):
-    def diagnose(self):
-        if self._health <= 0:
-            return "you aren't alive!"
-        else:
-            return 'rest = {}% of life'.format(self._health)
+    def driving(self):
+        self._current_mileage += 15000
