@@ -20,7 +20,7 @@ class ListenedObject(metaclass=ABCMeta):
         :param data: дані, що надсилаються слухачу.
         """
         for listener in self._listeners:  # кожному підписаному слухачу
-            listener.onDataReceive(data)     # надсилає дані
+            listener.onDataReceive(data)  # надсилає дані
 
 
 class FileReader(ListenedObject):
