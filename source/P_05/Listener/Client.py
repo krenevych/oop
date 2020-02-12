@@ -5,12 +5,16 @@ from source.P_05.Listener.Listener import Listener
 class FilePrinter(Listener):
     """ Реалізація інтерфейсу Listener
         Виводить отримані рядки на екран """
-    def onReadLine(self, line):
+
+    def onDataReceive(self, line):
         print(line)
 
 
 class WordCounter(Listener):
-    def onReadLine(self, line):
+    """ Реалізація інтерфейсу Listener
+        Підраховує кількість слів у текстовому файлі """
+
+    def onDataReceive(self, line):
         global words_number
         words = line.split()
         words_number += len(words)
@@ -19,8 +23,8 @@ class WordCounter(Listener):
 if __name__ == "__main__":
     filereader = FileReader("input.txt")
 
-    filereader.addListener(FilePrinter())
-    filereader.addListener(WordCounter())
+    filereader.registerListener(FilePrinter())
+    filereader.registerListener(WordCounter())
 
     words_number = 0
     filereader.read()

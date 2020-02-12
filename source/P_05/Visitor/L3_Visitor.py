@@ -4,9 +4,7 @@ from source.P_05.Visitor.L2_Creature import Human, Pet
 
 ##########################################
 class Visitor(metaclass=ABCMeta):
-    """
-    Базовий клас Відвідувач
-    """
+    """ Базовий клас Відвідувач """
 
     @abstractmethod
     def visit(self, creature):
@@ -15,9 +13,7 @@ class Visitor(metaclass=ABCMeta):
 
 ##########################################
 class Doctor(Visitor):
-    """
-    Клас лікар - вміє лікувати людей
-    """
+    """ Клас лікар - вміє лікувати людей """
 
     def visit(self, creature):
         if isinstance(creature, Human):
@@ -28,9 +24,7 @@ class Doctor(Visitor):
 
 ##########################################
 class Veterinarian(Visitor):
-    """
-    Клас Ветеринар - вміє лікувати тварин
-    """
+    """ Клас Ветеринар - вміє лікувати тварин """
 
     def visit(self, creature):
         if isinstance(creature, Human):
@@ -41,9 +35,7 @@ class Veterinarian(Visitor):
 
 ##########################################
 class PetTrainer(Visitor):
-    """
-    Клас Дресирувальник домашніх тварин
-    """
+    """  Клас Дресирувальник домашніх тварин """
 
     def visit(self, creature):
         if isinstance(creature, Human):
@@ -54,9 +46,7 @@ class PetTrainer(Visitor):
 
 ##########################################
 class Accountant(Visitor):
-    """
-    Клас Бухгалтер - вміє нараховувати заробітну плату працівникам
-    """
+    """ Клас Бухгалтер - вміє нараховувати заробітну плату працівникам """
 
     def visit(self, creature):
         if isinstance(creature, Human):
@@ -67,9 +57,7 @@ class Accountant(Visitor):
 
 ##########################################
 class Robber(Visitor):
-    """
-    Клас грабіжник - відбирає гроші у людей та псує здоров'я
-    """
+    """ Клас грабіжник - відбирає гроші у людей та псує здоров'я """
 
     def visit(self, creature):
         if isinstance(creature, Human):

@@ -2,9 +2,7 @@ from abc import ABCMeta, abstractmethod
 
 
 class Creature(metaclass=ABCMeta):
-    """
-    Абстрактний клас Істота
-    """
+    """ Абстрактний клас Істота """
 
     def __init__(self, name) -> None:
         self.mHealth = 100  # відсоток здоров'я
@@ -12,8 +10,7 @@ class Creature(metaclass=ABCMeta):
 
     @abstractmethod
     def accept(self, visitor):
-        """
-        Абстрактний метод, що використовується для реалізації шаблону проектування Відвідувач
+        """ Абстрактний метод, що використовується для реалізації шаблону проектування Відвідувач
         :param visitor: відмідувач
         """
         pass
@@ -41,9 +38,7 @@ class Creature(metaclass=ABCMeta):
 
 
 class Human(Creature):
-    """
-    Клас людина
-    """
+    """ Клас людина """
 
     def __init__(self, name) -> None:
         super().__init__(name)
@@ -65,9 +60,7 @@ class Human(Creature):
 
 
 class Pet(Creature):
-    """
-    Клас домашня тварина
-    """
+    """ Клас домашня тварина """
 
     def __init__(self, name) -> None:
         super().__init__(name)

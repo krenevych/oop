@@ -6,6 +6,6 @@ class Listener(metaclass=ABCMeta):
     """ Інтефейс - Слухач """
 
     @abstractmethod
-    def onReadLine(self, line):
+    def onDataReceive(self, line):
         pass
 
