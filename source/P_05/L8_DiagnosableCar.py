@@ -1,13 +1,13 @@
 # Конкретний клас Автомобіль
-from source.P_05.L5 import Diagnosable
-from source.P_05.L6 import Transport
+from source.P_05.L5_Diagnosable import Diagnosable
+from source.P_05.L6_Car import Car
 
 
-class Car(Transport, Diagnosable):
+class DiagnosableCar(Car, Diagnosable):
     def diagnose(self):
         if self._current_mileage >= self._resource:
-            return "your car requires major repairs"
+            return "Your car requires major repairs!"
         rest = self._resource - self._current_mileage
         rest /= self._resource
         rest *= 100
-        return "rest {}% of resource".format(rest)
+        return "Rest {}% of resource".format(rest)

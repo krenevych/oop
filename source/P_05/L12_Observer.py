@@ -2,7 +2,7 @@ from abc import ABCMeta, abstractmethod
 
 
 ##########################################
-class Listener(metaclass=ABCMeta):
+class Observer(metaclass=ABCMeta):
     """ Інтефейс - Слухач """
 
     @abstractmethod

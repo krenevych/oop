@@ -1,12 +1,12 @@
-from source.P_05.L8 import Car
-from source.P_05.L9 import Human
+from source.P_05.L8_DiagnosableCar import DiagnosableCar
+from source.P_05.L9_DiagnosableHuman import DiagnosableHuman
 
-c = Car()
-h = Human()
+c = DiagnosableCar()
+h = DiagnosableHuman()
 
 for i in range(5):
     c.driving()
-    h.attend_party()
+    h.eat("junk food")
 
 print(c.diagnose())
 print(h.diagnose())
