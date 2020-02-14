@@ -1,4 +1,4 @@
-# Конкретний клас Людина
+# Діагностована Людина
 from source.P_05.L5_Diagnosable import Diagnosable
 from source.P_05.L7_Human import Human
 

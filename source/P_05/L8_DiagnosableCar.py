@@ -1,4 +1,4 @@
-# Конкретний клас Автомобіль
+# Діагностований Автомобіль
 from source.P_05.L5_Diagnosable import Diagnosable
 from source.P_05.L6_Car import Car
 

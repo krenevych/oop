@@ -1,5 +1,5 @@
-from source.P_05.L18 import Cat, Dog, Parrot
-from source.P_05.L19 import Logged
+from source.P_05.L14 import Cat, Dog, Parrot
+from source.P_05.L15 import Logged
 
 
 # Фактично додаємо до класів Cat, Dog, Parrot
