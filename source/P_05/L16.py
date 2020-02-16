@@ -1,25 +1,40 @@
-from source.P_05.L14 import Cat, Dog, Parrot
-from source.P_05.L15 import Logged
+from abc import ABCMeta, abstractmethod
 
 
-# Фактично додаємо до класів Cat, Dog, Parrot
-# функціонал класу Loged
-class LoggedCat(Logged, Cat):
-    pass
+class Pet(metaclass = ABCMeta):
+    def __init__(self, name, legs, fleas):
+        """ Конструктор
+        :param name: Кличка тварини
+        """
+        self._name = name   # кличка тварини
+        self._legs = legs   # кількість лап
+        self._fleas = fleas # кількість бліх
+
+    @abstractmethod
+    def voice(self): # абстрактний метод
+        pass         # порожня реалізація
 
 
-class LoggedDog(Logged, Dog):
-    pass
+class Cat(Pet):
+    """ Клас Cat - нащадок класу Pet """
+
+    def voice(self):
+        """ Метод "голос" """
+        print("Cat", self._name, "says:" , "Miu, miu, miu...")
 
 
-class LoggedParrot(Logged, Parrot):
-    pass
+class Dog(Pet):
+    """ Клас Dog - нащадок класу Pet """
+
+    def voice(self):
+        """ Метод "голос" """
+        print("Dog", self._name, "says:" , "Gav, gav, gav...!!!")
 
 
-c = LoggedCat("Кузя", 4, 2)
-d = LoggedDog("Барбос", 4, 1)
-p = LoggedParrot("Попка", 2, 0)
+class Parrot(Pet):
+    """ Клас Parrot - нащадок класу Pet """
 
-c.log()  # Викликаємо метод класу Loged
-d.log()  # Викликаємо метод класу Loged
-p.log()  # Викликаємо метод класу Loged
+    def voice(self):
+        """ Метод "голос" """
+        print("Parrot says:", self._name + " horoshy!")
+

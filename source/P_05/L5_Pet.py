@@ -34,11 +34,11 @@ class Pet(metaclass=ABCMeta):
 class Cat(Pet):
     """ Клас Кіт """
 
+    def accept(self, visitor):
+        visitor.visitCat(self)
+
     def __str__(self):
         return "== Cat ==\n" + super().__str__()
-
-    def accept(self, visitor):
-        visitor.visit(self)
 
     def feed(self):
         """ Годувати кота """
@@ -57,11 +57,11 @@ class Dog(Pet):
         super().__init__(name)
         self.skills = 0
 
+    def accept(self, visitor):
+        visitor.visitDog(self)
+
     def __str__(self):
         return "== Dog ==\n" + super().__str__() + ";\nSkills = " + str(self.skills)
-
-    def accept(self, visitor):
-        visitor.visit(self)
 
     def getBone(self):
         """ Отримати кістку """

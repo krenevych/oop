@@ -1,6 +1,6 @@
 from abc import ABCMeta
 
-from source.P_05.L12_Observer import Observer
+from source.P_05.L14_Observer import Observer
 
 
 class Subject(metaclass=ABCMeta):

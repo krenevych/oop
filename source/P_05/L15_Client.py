@@ -1,5 +1,5 @@
-from source.P_05.L11_FileReader import FileReader
-from source.P_05.L12_Observer import Observer
+from source.P_05.L13_FileReader import FileReader
+from source.P_05.L14_Observer import Observer
 
 
 class FilePrinter(Observer):

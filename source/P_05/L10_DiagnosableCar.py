@@ -1,6 +1,6 @@
 # Діагностований Автомобіль
-from source.P_05.L5_Diagnosable import Diagnosable
-from source.P_05.L6_Car import Car
+from source.P_05.L7_Diagnosable import Diagnosable
+from source.P_05.L8_Car import Car
 
 
 class DiagnosableCar(Car, Diagnosable):

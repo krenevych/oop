@@ -1,5 +1,5 @@
-from source.P_05.L8_DiagnosableCar import DiagnosableCar
-from source.P_05.L9_DiagnosableHuman import DiagnosableHuman
+from source.P_05.L10_DiagnosableCar import DiagnosableCar
+from source.P_05.L11_DiagnosableHuman import DiagnosableHuman
 
 c = DiagnosableCar()
 h = DiagnosableHuman()
