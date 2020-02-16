@@ -51,7 +51,7 @@ class Cat(Pet):
 
 
 class Dog(Pet):
-    """ Клас домашня тварина """
+    """ Клас Кіт """
 
     def __init__(self, name) -> None:
         super().__init__(name)
