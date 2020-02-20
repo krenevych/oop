@@ -1,6 +1,6 @@
-
 class Equation:
     """ Клас лінійне рівняння виду bx + c = 0 """
+
     def __init__(self, b, c):
         """ Конструктор
         :param b: коефіцієнт рівння при x
@@ -29,7 +29,11 @@ class Equation:
 if __name__ == "__main__":
     eq = Equation(1, 4)
     print(eq.solve())
+    eq = Equation(4, 1)
+    print(eq.solve())
     eq = Equation(0, 0)
     print(eq.solve())
     eq = Equation(0, 1)
+    print(eq.solve())
+    eq = Equation(1, 0)
     print(eq.solve())
