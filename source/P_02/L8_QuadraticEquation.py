@@ -1,4 +1,4 @@
-from source.P_02.Equation.Equation import Equation
+from source.P_02.L7_Equation import Equation
 
 
 class QuadraticEquation(Equation):

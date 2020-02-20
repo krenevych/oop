@@ -1,4 +1,4 @@
-from source.P_02.Equation.QuadraticEquation import QuadraticEquation
+from source.P_02.L8_QuadraticEquation import QuadraticEquation
 
 
 class BiquadraticEquation (QuadraticEquation):

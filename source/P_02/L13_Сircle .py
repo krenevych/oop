@@ -1,4 +1,4 @@
-from source.P_02.L11_Figure import Figure
+from source.P_02.L12_Figure import Figure
 import turtle as t
 
 

@@ -1,4 +1,4 @@
-from source.P_02.L9_Pet import Pet
+from source.P_02.L10_Pet import Pet
 
 
 class Dog(Pet):
