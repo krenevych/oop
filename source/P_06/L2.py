@@ -1,14 +1,11 @@
-from time import clock  # підключення функції clock
+class Pet:
+    def __init__(self, name):
+        self._name = name
+
+    def getName(self):
+        return self._name
 
 
-def benchmark(f):
-    def _benchmark(*args, **kw):
-        # вимірюємо час перед викликом функції
-        current_time = clock()
-        rez = f(*args, **kw)  # викликаємо f
-        # обчилюємо різницю у часі
-        dt = clock() - current_time
-        print('Час виконання функції %1.5f cек' % dt)
-        return rez
-
-    return _benchmark
+if __name__ == "__main__":
+    p = Pet("Kuzya")
+    print(dir(p))

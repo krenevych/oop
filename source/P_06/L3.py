@@ -1,21 +1,20 @@
-from source.P_06.L2 import benchmark
+from source.P_06.L2 import Pet
 
 
-@benchmark
-def Fib1(n):
-    F1 = F2 = 1
-    for i in range(2, n + 1):
-        F2, F1 = F1, F1 + F2
-    return F1
+class Cat(Pet):
+    legs = 4
+    ears = 2
+
+print(Cat.__bases__)
 
 
-def FibRecursive(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return FibRecursive(n - 1) + FibRecursive(n - 2)
+if __name__ == "__main__":
+    c = Cat("Kuzya")
+    print(Cat.__dict__)
+    print(c.__dict__)
 
+    print(type(c))   #   у Python 3 буде аналогічним до використання такого print(c.__class__)
 
-@benchmark
-def Fib2(n):
-    return FibRecursive(n)
+    # особливості функцій isinstance та type
+    print(isinstance(c, Pet))
+    print(type(c) == Pet)
