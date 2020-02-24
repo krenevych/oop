@@ -1,5 +1,5 @@
 from source.P_02.L12_Figure import Figure
-import turtle as t
+from turtle import *
 
 
 class Quadrate(Figure):
@@ -21,28 +21,28 @@ class Quadrate(Figure):
         """ Допоміжний метод, що зображує квадрат заданим кольором
         :param color: колір
         """
-        t.pencolor(color)
-        t.up()
+        pencolor(color)
+        up()
         # встановлюємо позицію лівого нижнього кута квадрата
-        t.setpos(self._x, self._y)
-        t.setheading(0)
-        t.down()
-        t.forward(self._a)  # перша сторона квадрата,
-        t.left(90)
-        t.forward(self._a)  # друга сторона квадрата
-        t.left(90)
-        t.forward(self._a)  # третя сторона квадрата
-        t.left(90)
-        t.forward(self._a)  # четверта сторона квадрата
-        t.up()
+        setpos(self._x, self._y)
+        setheading(0)
+        down()
+        forward(self._a)  # перша сторона квадрата,
+        left(90)
+        forward(self._a)  # друга сторона квадрата
+        left(90)
+        forward(self._a)  # третя сторона квадрата
+        left(90)
+        forward(self._a)  # четверта сторона квадрата
+        up()
 
 
 # Перевірка роботи класу
 if __name__ == '__main__':
-    t.home()
-    t.delay(30)
+    home()
+    delay(30)
     q = Quadrate(0, 0, 150, "red")
     q.show()
     q.move(0, 140)
     q.hide()
-    t.mainloop()
+    mainloop()

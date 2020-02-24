@@ -1,4 +1,4 @@
-import turtle as t
+from turtle import *
 
 
 class Figure:
@@ -36,7 +36,7 @@ class Figure:
             self._visible = False
             # щоб сховати фігуру, потрібно
             # зобразити її кольором фону.
-            self._draw(t.bgcolor())
+            self._draw(bgcolor())
 
     def move(self, dx, dy):
         """ Переміщує об'єкт

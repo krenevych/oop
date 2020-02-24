@@ -1,5 +1,5 @@
 from source.P_02.L12_Figure import Figure
-import turtle as t
+from turtle import *
 
 
 class Circle (Figure):
@@ -20,20 +20,20 @@ class Circle (Figure):
         """ Допоміжний метод, що зображує коло заданим кольором
         :param color: колір
         """
-        t.pencolor(color)
-        t.up()
+        pencolor(color)
+        up()
         # малює починаючи знизу кола
-        t.setpos(self._x, self._y - self._r)
-        t.down()
-        t.circle(self._r)
-        t.up()
+        setpos(self._x, self._y - self._r)
+        down()
+        circle(self._r)
+        up()
 
 
 # Перевірка роботи класу
 if __name__ == '__main__':
-    t.home()
-    t.delay(10)
+    home()
+    delay(10)
     c = Circle(120, 120, 50, "blue")
     c.show()
     c.move(-30, -140)
-    t.mainloop()
+    mainloop()
