@@ -5,10 +5,11 @@ class Cat(Pet):
     legs = 4
     ears = 2
 
-print(Cat.__bases__)
-
 
 if __name__ == "__main__":
+
+    print(Cat.__bases__)
+
     c = Cat("Kuzya")
     print(Cat.__dict__)
     print(c.__dict__)
