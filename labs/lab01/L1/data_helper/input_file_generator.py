@@ -16,4 +16,4 @@ def generate(fname, equations_number):
 if __name__ == "__main__":
     generate("input01.txt", 100)
     generate("input02.txt", 500)
-    generate("input04.txt", 1000)
+    generate("input03.txt", 1000)
