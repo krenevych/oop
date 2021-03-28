@@ -1,6 +1,6 @@
 from random import randint
 
-MAX_COEF = 999
+MAX_COEF = 99
 
 
 def generate(fname, max_pow, coef_number):
@@ -24,3 +24,7 @@ def generate(fname, max_pow, coef_number):
 if __name__ == "__main__":
     generate("input01.txt", 40, 30)
     generate("input02.txt", 40, 30)
+    generate("input03.txt", 40, 30)
+    generate("input04.txt", 40, 30)
+    generate("input05.txt", 40, 30)
+    generate("input06.txt", 40, 30)
