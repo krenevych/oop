@@ -2,13 +2,10 @@
 
 from random import randint
 
-N_MAXKEY = 25
-MULT = 4
-
 Speciality = {
-    "Математика": 80,  # Математика, кількість студентів на курсі
-    "Статистика": 50,  # Статистика
-    "Середня освіта": 20,  # Середня освіта-математика
+    "Математика": 180,  # Математика, кількість студентів на курсі
+    "Статистика": 150,  # Статистика
+    "Середня освіта": 50,  # Середня освіта-математика
 }
 
 Exam = "Екзамен"
@@ -70,6 +67,7 @@ def generate(fname):
                 student = students[stud_rand_num]
                 stud_distribution[(year, spec)].append(student)
                 students.remove(student)
+            stud_distribution[(year, spec)].sort()
 
     with open(fname, "w", encoding='utf-8') as f_out:
         for spec in Speciality:
@@ -86,8 +84,4 @@ def generate(fname):
 
 
 if __name__ == "__main__":
-    generate("input01.txt")
-
-    with open("../input01.txt", encoding='utf-8') as f:
-        for line in f:
-            print(line)
+    generate("input02.txt")
